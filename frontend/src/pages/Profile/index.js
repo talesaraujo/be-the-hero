@@ -22,7 +22,7 @@ function Profile() {
             <h1>Casos cadastrados</h1>
 
             <ul>
-            <li>
+                <li>
                     <strong>CASO:</strong>
                     <p>Caso teste</p>
 
