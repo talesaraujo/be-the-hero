@@ -1,5 +1,5 @@
 const db = require('../database/connection');
-const crypto = require('crypto');
+const generateUniqueId = require('../utils/generateUniqueId');
 
 const index = async (req, res) => {
     const ngos = await db('ngos').select('*');
@@ -10,7 +10,7 @@ const index = async (req, res) => {
 const create = async (req, res) => {
     const { name, email, whatsapp, city, uf } = req.body;
 
-    const id = crypto.randomBytes(4).toString('HEX');
+    const id = generateUniqueId();
 
     await db('ngos').insert({
         id,
